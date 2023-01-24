@@ -39,13 +39,13 @@ Shader "Custom/Ocean" {
             v2f o;
             float x = v.uv.x * _Wavelength + _Speed * _Time.y;
             float y = v.uv.y * _Wavelength + _Speed * _Time.y;
-            float z = v.vertex.z + _WaveHeight * sin(x + y);
-            o.vertex = UnityObjectToClipPos(float3(v.vertex.x, z, v.vertex.z));
+            float y_pos = v.vertex.y + _WaveHeight * sin(x + y);
+            o.vertex = UnityObjectToClipPos(float3(v.vertex.x, y_pos, v.vertex.z));
             o.uv = v.uv;
             return o;
         }
 
-        fixed4 frag (v2f i) : SV_Target 
+        fixed4 frag (v2f i) : SV_Target
         {
             fixed4 col = tex2D(_MainTex, i.uv * _Tiling);
             return col;

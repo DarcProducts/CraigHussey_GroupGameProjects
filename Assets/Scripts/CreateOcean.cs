@@ -6,11 +6,15 @@ public sealed class CreateOcean : MonoBehaviour
     const int LENGTH = 200;
     const float SCALE = 5;
 
-    void Start()
+    private void Start()
+    {
+        CreateOceanMesh();
+    }
+
+    public Mesh CreateOceanMesh()
     {
         MeshFilter meshFilter = GetComponent<MeshFilter>();
         Mesh mesh = new();
-        meshFilter.mesh = mesh;
 
         Vector3[] vertices = new Vector3[WIDTH * LENGTH];
         Vector2[] uv = new Vector2[vertices.Length];
@@ -47,5 +51,7 @@ public sealed class CreateOcean : MonoBehaviour
         mesh.uv = uv;
         mesh.triangles = triangles;
         mesh.RecalculateNormals();
+        meshFilter.mesh = mesh;
+        return mesh;
     }
 }
