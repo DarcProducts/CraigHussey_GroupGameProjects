@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ocean : MonoBehaviour
 {
     [SerializeField] CreateOcean createOcean;
-    [SerializeField] Vector3 offset; 
+    [SerializeField] Vector3 offset;
     MeshRenderer meshRenderer;
     Mesh mesh;
 
@@ -21,7 +21,7 @@ public class Ocean : MonoBehaviour
         mesh = createOcean.CreateOceanMesh();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         float wavelength = meshRenderer.material.GetFloat("_Wavelength");
         float waveHeight = meshRenderer.material.GetFloat("_WaveHeight");
@@ -33,9 +33,8 @@ public class Ocean : MonoBehaviour
             float x = vertices[i].x * wavelength + speed * time;
             float y = vertices[i].y * wavelength + speed * time;
             vertices[i].y += waveHeight * Mathf.Sin(x + y);
+           
         }
-        //mesh.vertices = vertices;
-
         // Create a native array to store the vertices
         NativeArray<Vector3> nativeVertices = new(vertices, Allocator.Persistent);
         // Create a native array to store the closest vertex index
