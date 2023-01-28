@@ -1,18 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class HoverInfo : MonoBehaviour
+public class HoverInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    // Start is called before the first frame update
-    void Start()
+    public static Action<Vector3, HoverInfo> OnPointerEntered, OnPointerExited;
+    public ItemType currentItemType;
+    string itemName;
+
+    public void CreateItemName()
     {
-        
+        string name = "Unknown";
+        itemName = name;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        
+        OnPointerEntered?.Invoke(transform.position, this);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        OnPointerExited?.Invoke(transform.position, this);
     }
 }

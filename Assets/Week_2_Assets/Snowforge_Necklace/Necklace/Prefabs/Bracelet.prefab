@@ -14,10 +14,10 @@ GameObject:
   - component: {fileID: 6813658202744475668}
   - component: {fileID: 2097118638901313515}
   - component: {fileID: 1826172970895050832}
-  - component: {fileID: 1127987208056206836}
-  - component: {fileID: 4039636934371912976}
+  - component: {fileID: -1988423625696347107}
+  - component: {fileID: 6635977175915440468}
   m_Layer: 0
-  m_Name: Necklace
+  m_Name: Bracelet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,9 +30,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3033273108864270443}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 33d4b68b4e176bd46bc1396334dc2641, type: 2}
+  - {fileID: 2100000, guid: c33d5c46077c2864db279bf5f9d8e4d1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxYValue: -1
---- !u!114 &1127987208056206836
+--- !u!114 &-1988423625696347107
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,8 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d50d9d007f4c88e4b9742c6dd51119a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentItemType: 5
---- !u!114 &4039636934371912976
+  currentItemType: 4
+--- !u!114 &6635977175915440468
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

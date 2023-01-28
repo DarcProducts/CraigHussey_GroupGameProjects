@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 8605680338132320780}
   - component: {fileID: 2568287495950693995}
   - component: {fileID: -7934228047893278434}
+  - component: {fileID: -8867138458533851659}
+  - component: {fileID: 6668684544206248676}
   m_Layer: 0
   m_Name: Grenade_Smoke
   m_TagString: Untagged
@@ -128,3 +130,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxYValue: -1
+--- !u!114 &-8867138458533851659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d50d9d007f4c88e4b9742c6dd51119a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentItemType: 6
+--- !u!114 &6668684544206248676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0186fe7a7c177a49944d15b509a3484, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
