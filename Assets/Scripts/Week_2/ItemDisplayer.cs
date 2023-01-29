@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class ItemDisplayer : MonoBehaviour
 {
@@ -24,16 +21,22 @@ public class ItemDisplayer : MonoBehaviour
         HoverInfo.OnPointerExited -= HideItemDisplay;
     }
 
+    private void FixedUpdate()
+    {
+        if (infoCanvas.isActiveAndEnabled)
+            infoCanvas.transform.LookAt(mainCamera.transform.position + panelRotationOffset);
+    }
+
     void DisplayItem(Vector3 position, HoverInfo info)
     {
+        itemInfoText.SetText(info.itemName);
         infoCanvas.transform.position = position + infoPanelOffset;
-        infoCanvas.transform.LookAt(mainCamera.transform.position + panelRotationOffset);
-        itemInfoText.text = info.currentItemType.ToString();
         infoCanvas.gameObject.SetActive(true);
     }
 
     void HideItemDisplay(Vector3 position, HoverInfo info)
     {
+        itemInfoText.text = string.Empty;
         infoCanvas.transform.position = Vector3.zero + Vector3.down * 10;
         infoCanvas.gameObject.SetActive(false);
     }

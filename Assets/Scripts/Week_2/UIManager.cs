@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UIElements;
@@ -99,5 +97,5 @@ public class UIManager : MonoBehaviour
 
     void ExitButtonEntered(MouseEnterEvent evt) => OnExitButtonEntered?.Invoke();
 
-    void ExitButtonExited(MouseOutEvent evt) => OnExitButtonExited?.Invoke(); 
+    void ExitButtonExited(MouseOutEvent evt) => OnExitButtonExited?.Invoke();
 }

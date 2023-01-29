@@ -33,7 +33,7 @@ public class Ocean : MonoBehaviour
             float x = vertices[i].x * wavelength + speed * time;
             float y = vertices[i].y * wavelength + speed * time;
             vertices[i].y += waveHeight * Mathf.Sin(x + y);
-           
+
         }
         // Create a native array to store the vertices
         NativeArray<Vector3> nativeVertices = new(vertices, Allocator.Persistent);

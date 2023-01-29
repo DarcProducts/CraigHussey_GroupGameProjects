@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -8,12 +6,12 @@ public class HoverInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 {
     public static Action<Vector3, HoverInfo> OnPointerEntered, OnPointerExited;
     public ItemType currentItemType;
-    string itemName;
+    public string itemName;
 
-    public void CreateItemName()
+    void OnEnable()
     {
-        string name = "Unknown";
-        itemName = name;
+        itemName = string.Empty;
+        itemName = ItemNameGenerator.Instance.CreateItemName(currentItemType);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
