@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class ItemDisplayer : MonoBehaviour
+public sealed class ItemDisplayer : MonoBehaviour
 {
     [SerializeField] Camera mainCamera;
     [SerializeField] Canvas infoCanvas;
@@ -29,7 +29,7 @@ public class ItemDisplayer : MonoBehaviour
 
     void DisplayItem(Vector3 position, HoverInfo info)
     {
-        itemInfoText.SetText(info.itemName);
+        itemInfoText.text = info.itemName;
         infoCanvas.transform.position = position + infoPanelOffset;
         infoCanvas.gameObject.SetActive(true);
     }
@@ -41,4 +41,3 @@ public class ItemDisplayer : MonoBehaviour
         infoCanvas.gameObject.SetActive(false);
     }
 }
-

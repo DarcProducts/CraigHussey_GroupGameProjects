@@ -10,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 456820}
   - component: {fileID: 3304046}
+  - component: {fileID: -3532340571266101539}
   - component: {fileID: 2363012}
   - component: {fileID: 4144395526984258577}
+  - component: {fileID: -2527674354441788336}
   - component: {fileID: -7671518762312251564}
   - component: {fileID: 7028492211219094483}
   - component: {fileID: 6223402277659659873}
@@ -46,6 +48,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123080}
   m_Mesh: {fileID: 4300000, guid: 72be0c703037640cf97b8487e7a0d830, type: 3}
+--- !u!114 &-3532340571266101539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 411b9b8328d01b144926d3ee577230b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sourceName: FXSource
+  spawnSound: {fileID: 8300000, guid: 0048c4f0d48ca83429ba60ee7070d0e0, type: 3}
+  collideSound: {fileID: 8300000, guid: fff9d3716a2a00345b28e88d98284632, type: 3}
+  activateSound: 3
+  minMaxCollideVolume: {x: 0.4, y: 0.8}
+  minMaxSpawnVolume: {x: 0.4, y: 0.8}
+  minMaxPitch: {x: 0.8, y: 1.2}
 --- !u!23 &2363012
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -102,6 +123,20 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 72be0c703037640cf97b8487e7a0d830, type: 3}
+--- !u!114 &-2527674354441788336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4681251ca92b66f49abbc3c5e75eabfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravityScale: 12
+  modifiedGravityScale: 16
 --- !u!54 &-7671518762312251564
 Rigidbody:
   m_ObjectHideFlags: 0

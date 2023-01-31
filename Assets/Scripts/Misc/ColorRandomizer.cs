@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ColorRandomizer : MonoBehaviour
+public sealed class ColorRandomizer : MonoBehaviour
 {
     void OnEnable()
     {

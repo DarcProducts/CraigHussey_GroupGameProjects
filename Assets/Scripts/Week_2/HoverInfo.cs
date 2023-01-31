@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class HoverInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public sealed class HoverInfo : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public static Action<Vector3, HoverInfo> OnPointerEntered, OnPointerExited;
     public ItemType currentItemType;

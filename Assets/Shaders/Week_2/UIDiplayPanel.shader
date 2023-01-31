@@ -8,7 +8,7 @@ Shader "Custom/UIDiplayPanel"
     }
     SubShader
     {
-        Tags { "Queue"="Geometry" "RenderType"="Opaque" }
+        Tags { "Queue"="Transparent" "RenderType"="Transparent" }
         LOD 100
         ZTest Always
         Cull Off
